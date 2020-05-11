@@ -4,7 +4,8 @@ var stream_set = require('stream-set');
 var json_stream = require('duplex-json-stream');
 
 var hub = signal_hub('lock-step-demo', [
-    'https://signalhub-jccqtwhdwc.now.sh' // change to https://ibsardar.com eventually...
+    //'https://signalhub-jccqtwhdwc.now.sh' // public free server
+    'https://ibsardar.com'
 ]);
 
 var swarm_max = 4;

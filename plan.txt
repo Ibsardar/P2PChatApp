@@ -6,7 +6,8 @@ P2P Chat System + P2P Canvas Shape-Transformation Simulator
 > Includes a chat window below where peers can chat with each other
 
 client
-- *.min.js
+- main.min.js
+- P2PChat.html < main.min.js
 
 server
 *empty*
