@@ -11,9 +11,6 @@ var wrtc_swarm = require('webrtc-swarm');
 var stream_set = require('stream-set');
 var json_stream = require('duplex-json-stream');
 
-// my imports
-import { Peer, ChatWindow, SimWindow } from 'Peer.js';
-
 // my exports
 export { Peer }
 

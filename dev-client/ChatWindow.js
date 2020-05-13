@@ -13,7 +13,7 @@ class ChatWindow {
     static init(element, new_element_id) {
 
         ChatWindow.element = $('<div id="'+new_element_id+'" class="container"></div>');
-        ChatWindow.input_element = $('<input id="cw-input"></input>');
+        ChatWindow.input_element = $('<input id="cw-input" placeholder="chat here..."></input>');
         ChatWindow.output_element = $('<textarea id="cw-area"></textarea>');
 
         $(ChatWindow.element).append(ChatWindow.output_element);
@@ -21,24 +21,19 @@ class ChatWindow {
         $(element).append(ChatWindow.element);
     }
 
-    static put() {}
+    static put(msg) {
 
-    static clear() {}
+        var hist = $(ChatWindow.output_element).val();
+        $(ChatWindow.output_element).val(hist + '\n' + msg);
+    }
 
-    // properties
-    static get on() { return Peer.connected; }
-    static get off() { return !Peer.connected; }
+    static clear() {
+
+        $(ChatWindow.output_element).val('');
+    }
 
     // variables
-    static name;
-    static connected = false;
-    static swarm;
-    static streams;
-    static hub;
-
-    // constants
-    static get MAX_SWARM() { return 4; }
-
-    // privates
-    static _on_chat;
+    static element;
+    static input_element;
+    static output_element;
 }

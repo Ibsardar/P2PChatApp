@@ -5,7 +5,8 @@
 //
 // ========================
 
-import { Peer, ChatWindow, SimWindow } from 'Peer.js';
+import { Peer } from './Peer.js';
+import { ChatWindow } from './ChatWindow.js';
 
 export { main as chatapp }
 
